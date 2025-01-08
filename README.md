@@ -1,66 +1,162 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛍️ Laravel E-commerce with Livewire & DaisyUI
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Livewire](https://img.shields.io/badge/Livewire-3-FB70A9?style=for-the-badge&logo=livewire&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-Latest-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white)
 
-## About Laravel
+A modern e-commerce platform built with Laravel 11, Livewire 3, and DaisyUI, featuring a responsive design and essential e-commerce functionalities.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 📦 Product Management with Variants
+- 🛒 Shopping Cart
+- 🗂️ Category Management
+- 💳 Order Management
+- 🏷️ Discount System
+- 📱 Responsive Design
+- 🎨 Beautiful UI with DaisyUI
+- 📦 Product Stock Management
+- 🚚 Shipping Method Management
+- 💰 Payment Method Integration
+- 🖼️ Hero Slides Management
+- 🔐 User Authentication & Authorization
+- ⚙️ General Settings Configuration
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📸 Screenshots
 
-## Learning Laravel
+![Index](https://i.ibb.co.com/cY3CnxV/Screenshot-2025-01-08-at-22-46-25.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Shopping Cart](https://i.ibb.co.com/GQGmFSm/Screenshot-2025-01-08-at-22-48-51.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![Orders](https://i.ibb.co.com/RbhWBLG/Screenshot-2025-01-08-at-22-51-14.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![Dashboard](https://i.ibb.co.com/ZYPVQL3/Screenshot-2025-01-08-at-22-52-20.png)
 
-## Laravel Sponsors
+![Order Admin](https://i.ibb.co.com/PGdnKfX/Screenshot-2025-01-08-at-22-54-10.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+![Hero Slides](https://i.ibb.co.com/rMFbdZf/Screenshot-2025-01-08-at-22-54-34.png)
 
-### Premium Partners
+## 🚀 Installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. Clone the repository
+```bash
+git clone https://github.com/freditrihandoko/laravel-ecommerce-daisyui.git
+cd laravel-ecommerce-daisyui
+```
 
-## Contributing
+2. Install dependencies
+```bash
+composer install
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. Copy the environment file
+```bash
+cp .env.example .env
+```
 
-## Code of Conduct
+4. Configure your database in `.env`
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. Generate application key
+```bash
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+6. Run migrations and seeders
+```bash
+php artisan migrate --seed
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. Link storage
+```bash
+php artisan storage:link
+```
 
-## License
+8. Compile assets
+```bash
+npm run dev
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+9. Start the server
+```bash
+php artisan serve
+```
+
+## 👤 Default Users
+
+After running the seeders, you can log in with these default accounts:
+
+**Admin Account**
+- Email: admin@gmail.com
+- Password: password
+
+**Customer Account**
+- Email: user@gmail.com
+- Password: password
+
+## 🔄 Database Seeder
+
+The DatabaseSeeder includes:
+- Super Admin and Customer user creation
+- Sample categories and products
+- General settings
+- Payment methods
+- Shipping methods
+- Order statuses
+
+## 🛠️ Future Improvements
+
+1. **Dynamic Shipping Integration**
+   - Integration with shipping providers (JNE, J&T, SiCepat, etc.)
+   - Real-time shipping cost calculation
+   - Tracking number integration
+
+2. **Payment Gateway Integration**
+   - Integration with payment gateways (Midtrans, Xendit, etc.)
+   - Automatic payment status updates
+   - Payment notification handling
+
+3. **Additional Features**
+   - Wishlist functionality
+   - Advanced product filtering
+   - Product comparison
+   - Customer chat support
+   - Sms / Whatsapp notifications
+   - Email notifications
+   - Product recommendations
+   - Multi-language support
+   - Advanced reporting and analytics
+   - Inventory management alerts
+
+## 💾 Database Structure
+
+The application includes the following main tables:
+- Users
+- Categories
+- Products
+- Product Variants
+- Orders
+- Order Items
+- Discounts
+- Addresses
+- Payment Information
+- Shipping Information
+- Product Stocks
+- General Settings
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](LICENSE.md).
