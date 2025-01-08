@@ -1,0 +1,156 @@
+class CategoryManagement extends Component
+{
+use WithPagination, WithFileUploads;
+
+public $search = '';
+public $name = '', $description = '', $image = '', $is_active = true, $parent_id = null;
+public $editingCategoryId;
+public $isModalOpen = false;
+public $confirmingCategoryDeletion = false;
+public $categoryIdBeingDeleted;
+public $tempImage;
+
+protected function rules()
+{
+return [
+'name' => [
+'required',
+'min:3',
+Rule::unique('categories', 'name')->ignore($this->editingCategoryId)
+],
+'description' => 'required',
+'image' => 'nullable|image|max:1024', // max 1MB
+'is_active' => 'boolean',
+'parent_id' => 'nullable|exists:categories,id'
+];
+}
+
+public function render()
+{
+$categories = Category::where('name', 'like', '%' . $this->search . '%')
+->with('parent')
+->orderBy('created_at', 'desc')
+->paginate(10);
+
+$parentCategories = Category::whereNull('parent_id')->get();
+
+return view('livewire.category-management', [
+'categories' => $categories,
+'parentCategories' => $parentCategories
+]);
+}
+
+public function updated($propertyName)
+{
+$this->validateOnly($propertyName);
+}
+
+public function create()
+{
+$this->resetInputFields();
+$this->openModal();
+}
+
+public function openModal()
+{
+$this->isModalOpen = true;
+}
+
+public function closeModal()
+{
+$this->isModalOpen = false;
+$this->resetInputFields();
+}
+
+public function resetInputFields()
+{
+$this->name = '';
+$this->description = '';
+$this->image = null;
+$this->is_active = true;
+$this->parent_id = null;
+$this->editingCategoryId = null;
+$this->tempImage = null;
+}
+
+public function store()
+{
+$validatedData = $this->validate();
+
+$category = new Category();
+$category->name = $this->name;
+$category->slug = Str::slug($this->name);
+$category->description = $this->description;
+$category->is_active = $this->is_active;
+$category->parent_id = $this->parent_id;
+
+if ($this->image) {
+$imagePath = $this->image->store('categories', 'public');
+$category->image_path = $imagePath;
+}
+
+$category->save();
+
+session()->flash('message', 'Category created successfully.');
+// $this->closeModal();
+$this->dispatch('close-modal');
+$this->resetInputFields();
+}
+
+public function edit($id)
+{
+$category = Category::findOrFail($id);
+$this->editingCategoryId = $id;
+$this->name = $category->name;
+$this->description = $category->description;
+$this->is_active = $category->is_active;
+$this->parent_id = $category->parent_id;
+$this->tempImage = $category->image_path;
+
+// $this->openModal();
+$this->dispatch('open-modal', name: 'category-modal');
+}
+
+public function update()
+{
+$validatedData = $this->validate();
+
+$category = Category::find($this->editingCategoryId);
+$category->name = $this->name;
+$category->slug = Str::slug($this->name);
+$category->description = $this->description;
+$category->is_active = $this->is_active;
+$category->parent_id = $this->parent_id;
+
+if ($this->image) {
+$imagePath = $this->image->store('categories', 'public');
+$category->image_path = $imagePath;
+}
+
+
+dd($category->save());
+
+session()->flash('message', 'Category updated successfully.');
+// $this->closeModal();
+$this->dispatch('close-modal');
+$this->resetInputFields();
+}
+
+public function confirmCategoryDeletion($id)
+{
+$this->confirmingCategoryDeletion = true;
+$this->categoryIdBeingDeleted = $id;
+}
+
+public function deleteCategory()
+{
+Category::find($this->categoryIdBeingDeleted)->delete();
+$this->confirmingCategoryDeletion = false;
+session()->flash('message', 'Category deleted successfully.');
+}
+
+public function updatingSearch()
+{
+$this->resetPage();
+}
+}

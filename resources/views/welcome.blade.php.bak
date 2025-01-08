@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laravel</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+
+</head>
+
+<body>
+
+    <livewire:navbar.main-navbar />
+
+    <livewire:hero-section />
+    <livewire:category-section />
+    <livewire:featured-products />
+
+    <!-- Categories Section -->
+
+    <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Shop by Category</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Category 1 -->
+            <div
+                class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/drone-camera_KFHFK9OLP7.jpg" alt="Category 1"
+                    class="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Category 1</h3>
+                        <a href="#"
+                            class="inline-block bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors duration-300 ease-in-out">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div
+                class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/vintage-camera_2AXFRK3HJA.jpg" alt="Category 2"
+                    class="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Category 2</h3>
+                        <a href="#"
+                            class="inline-block bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors duration-300 ease-in-out">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div
+                class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/iphone-studio_EKVPRXZ2YS.jpg" alt="Category 3"
+                    class="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Category 3</h3>
+                        <a href="#"
+                            class="inline-block bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors duration-300 ease-in-out">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div
+                class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/camera-lens_D5V3TQC8NN.jpg" alt="Category 4"
+                    class="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Category 4</h3>
+                        <a href="#"
+                            class="inline-block bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors duration-300 ease-in-out">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5 -->
+            <div
+                class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/laptop-apple_MCT3M1YMT5.jpg" alt="Category 4"
+                    class="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Category 4</h3>
+                        <a href="#"
+                            class="inline-block bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors duration-300 ease-in-out">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 6 -->
+            <div
+                class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/photographer-travel_K8ADKDAHCH.jpg" alt="Category 4"
+                    class="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Category 4</h3>
+                        <a href="#"
+                            class="inline-block bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors duration-300 ease-in-out">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    {{-- <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img
+                        src="https://images.pexels.com/photos/19012037/pexels-photo-19012037/free-photo-of-predator-logo-on-triton-300-se-gaming-laptop-palmrest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for other products -->
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="https://cdn.stocksnap.io/img-thumbs/960w/camera-lens_FUL7CILDYQ.jpg"
+                        alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for other products -->
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img
+                        src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for other products -->
+
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img
+                        src="https://images.pexels.com/photos/2929411/pexels-photo-2929411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for other products -->
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img
+                        src="https://images.pexels.com/photos/38568/apple-imac-ipad-workplace-38568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for other products -->
+
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img
+                        src="https://images.pexels.com/photos/4005565/pexels-photo-4005565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for other products -->
+        </div>
+    </div> --}}
+
+    <!-- Referensi Produk ukuran 1x1 -->
+    <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="relative pt-[100%] overflow-hidden">
+                    <!-- Image container with 1:1 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/19012037/pexels-photo-19012037/free-photo-of-predator-logo-on-triton-300-se-gaming-laptop-palmrest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Product 1" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Product 1</h2>
+                    <p class="line-clamp-2">Product description goes here. It can be multiple lines long.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold">$99.99</span>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="relative pt-[100%] overflow-hidden">
+                    <!-- Image container with 1:1 aspect ratio -->
+                    <img src="https://cdn.stocksnap.io/img-thumbs/960w/camera-lens_FUL7CILDYQ.jpg" alt="Product 2"
+                        class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Product 2</h2>
+                    <p class="line-clamp-2">Another product description. Keeping it consistent.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold">$149.99</span>
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat this card structure for other products -->
+        </div>
+    </div>
+
+    <!-- Referensi produk ukuran 4x3 -->
+    <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-center mb-6">Featured Products</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[75%] overflow-hidden">
+                    <!-- Image container with 4:3 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/19012037/pexels-photo-19012037/free-photo-of-predator-logo-on-triton-300-se-gaming-laptop-palmrest.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Product 1" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-4">
+                    <h3 class="card-title text-sm sm:text-base font-semibold mb-1 line-clamp-1">Product Name</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-2 line-clamp-2">Short product description goes here.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm sm:text-base font-bold">$99.99</span>
+                        <button class="btn btn-primary btn-sm">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[75%] overflow-hidden">
+                    <!-- Image container with 4:3 aspect ratio -->
+                    <img src="https://cdn.stocksnap.io/img-thumbs/960w/camera-lens_FUL7CILDYQ.jpg" alt="Product 2"
+                        class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-4">
+                    <h3 class="card-title text-sm sm:text-base font-semibold mb-1 line-clamp-1">Another Product</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 mb-2 line-clamp-2">This is another product description.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm sm:text-base font-bold">$149.99</span>
+                        <button class="btn btn-primary btn-sm">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat this card structure for other products -->
+        </div>
+    </div>
+
+    <!-- Referensi produk 4x6 / 2x3 untuk seperti produk outfit atau pakaian -->
+    <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-center mb-6">Featured Outfits</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[150%] overflow-hidden">
+                    <!-- Image container with 2:3 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/7206287/pexels-photo-7206287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Outfit 1" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-2 sm:p-3 md:p-4">
+                    <h3 class="card-title text-xs sm:text-sm md:text-base font-semibold mb-1 line-clamp-1">Stylish
+                        Summer Dress</h3>
+                    <p class="text-xs text-gray-600 mb-2 line-clamp-2 hidden sm:block">Comfortable and chic dress for
+                        warm days.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs sm:text-sm md:text-base font-bold">$79.99</span>
+                        <button class="btn btn-primary btn-xs sm:btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[150%] overflow-hidden">
+                    <!-- Image container with 2:3 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Outfit 2" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-2 sm:p-3 md:p-4">
+                    <h3 class="card-title text-xs sm:text-sm md:text-base font-semibold mb-1 line-clamp-1">Casual
+                        Business Suit</h3>
+                    <p class="text-xs text-gray-600 mb-2 line-clamp-2 hidden sm:block">Perfect for office and casual
+                        meetings.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs sm:text-sm md:text-base font-bold">$199.99</span>
+                        <button class="btn btn-primary btn-xs sm:btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[150%] overflow-hidden">
+                    <!-- Image container with 2:3 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/7206287/pexels-photo-7206287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Outfit 1" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-2 sm:p-3 md:p-4">
+                    <h3 class="card-title text-xs sm:text-sm md:text-base font-semibold mb-1 line-clamp-1">Stylish
+                        Summer Dress</h3>
+                    <p class="text-xs text-gray-600 mb-2 line-clamp-2 hidden sm:block">Comfortable and chic dress for
+                        warm days.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs sm:text-sm md:text-base font-bold">$79.99</span>
+                        <button class="btn btn-primary btn-xs sm:btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[150%] overflow-hidden">
+                    <!-- Image container with 2:3 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Outfit 2" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-2 sm:p-3 md:p-4">
+                    <h3 class="card-title text-xs sm:text-sm md:text-base font-semibold mb-1 line-clamp-1">Casual
+                        Business Suit</h3>
+                    <p class="text-xs text-gray-600 mb-2 line-clamp-2 hidden sm:block">Perfect for office and casual
+                        meetings.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs sm:text-sm md:text-base font-bold">$199.99</span>
+                        <button class="btn btn-primary btn-xs sm:btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 1 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[150%] overflow-hidden">
+                    <!-- Image container with 2:3 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/7206287/pexels-photo-7206287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Outfit 1" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-2 sm:p-3 md:p-4">
+                    <h3 class="card-title text-xs sm:text-sm md:text-base font-semibold mb-1 line-clamp-1">Stylish
+                        Summer Dress</h3>
+                    <p class="text-xs text-gray-600 mb-2 line-clamp-2 hidden sm:block">Comfortable and chic dress for
+                        warm days.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs sm:text-sm md:text-base font-bold">$79.99</span>
+                        <button class="btn btn-primary btn-xs sm:btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <figure class="relative pt-[150%] overflow-hidden">
+                    <!-- Image container with 2:3 aspect ratio -->
+                    <img src="https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Outfit 2" class="absolute inset-0 w-full h-full object-cover object-center" />
+                </figure>
+                <div class="card-body p-2 sm:p-3 md:p-4">
+                    <h3 class="card-title text-xs sm:text-sm md:text-base font-semibold mb-1 line-clamp-1">Casual
+                        Business Suit</h3>
+                    <p class="text-xs text-gray-600 mb-2 line-clamp-2 hidden sm:block">Perfect for office and casual
+                        meetings.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs sm:text-sm md:text-base font-bold">$199.99</span>
+                        <button class="btn btn-primary btn-xs sm:btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Repeat this card structure for other products -->
+        </div>
+    </div>
+    <!-- Newsletter Signup -->
+    <div class="bg-primary text-primary-content py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="mb-6">Stay updated with our latest offers and products!</p>
+            <div class="form-control w-full max-w-xs mx-auto">
+                <label class="label">
+                    <span class="label-text text-primary-content">Enter your email</span>
+                </label>
+                <div class="relative">
+                    <input type="text" placeholder="username@site.com"
+                        class="input input-bordered w-full pr-16 text-base-content" />
+                    <button class="btn btn-secondary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <livewire:footer-section />
+    {{-- <footer class="footer p-10 bg-neutral text-neutral-content">
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </div>
+        <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </div>
+    </footer> --}}
+    <script>
+        var swiper = new Swiper(".categorySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
